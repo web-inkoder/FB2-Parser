@@ -47,7 +47,7 @@ class AuthorType implements IModel
     /**
      * @var int
      */
-    private $id = 0;
+    private $id = null;
 
 
     /**
