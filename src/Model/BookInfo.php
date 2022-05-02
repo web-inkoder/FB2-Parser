@@ -1,118 +1,144 @@
 <?php
 
 namespace Tizis\FB2\Model;
+
 /**
  * Class BookInfo
+ *
  * @package FB2\Model
  */
 class BookInfo implements IModel
 {
-  /**
-   * @var string
-   */
-  private $title = '';
-  /**
-   * @var string
-   */
-  private $annotation = '';
-  /**
-   * @var array
-   */
-  private $genres = [];
-  /**
-   * @var string
-   */
-  private $keywords = '';
-  /**
-   * @var array
-   */
-  private $lang = [
-    'lang' => null,
-    'src' => null
-  ];
+    /**
+     * @var string
+     */
+    private $title = '';
+    /**
+     * @var string
+     */
+    private $annotation = '';
+    /**
+     * @var array
+     */
+    private $genres = [];
+    /**
+     * @var string
+     */
+    private $keywords = '';
+    /**
+     * @var array
+     */
+    private $lang
+        = [
+            'lang' => null,
+            'src'  => null,
+        ];
 
-  /**
-   * @return array
-   */
-  public function getLang(): array
-  {
-    return $this->lang;
-  }
+    /**
+     * @var string
+     */
+    private $sequence = [
+        'name' => null,
+        'number' => null,
+    ];
 
-  /**
-   * @param array $values
-   */
-  public function setLang(array $values): void
-  {
-    $this->lang = $values;
-  }
+    /**
+     * @return array
+     */
+    public function getLang(): array
+    {
+        return $this->lang;
+    }
 
-
-  /**
-   * @return string
-   */
-  public function getKeywords(): string
-  {
-    return $this->keywords;
-  }
-
-  /**
-   * @param $values
-   */
-  public function setKeywords(string $values): void
-  {
-    $this->keywords = $values;
-  }
+    /**
+     * @param array $values
+     */
+    public function setLang(array $values): void
+    {
+        $this->lang = $values;
+    }
 
 
-  /**
-   * @return array
-   */
-  public function getGenres(): array
-  {
-    return $this->genres;
-  }
+    /**
+     * @return string
+     */
+    public function getKeywords(): string
+    {
+        return $this->keywords;
+    }
 
-  /**
-   * @param array $values
-   */
-  public function setGenres(array $values): void
-  {
-    $this->genres = $values;
-  }
-
-  /**
-   * @return string
-   */
-  public function getAnnotation(): string
-  {
-    return $this->annotation;
-  }
-
-  /**
-   * @param string $value
-   */
-  public function setAnnotation(string $value): void
-  {
-    $this->annotation = $value;
-  }
+    /**
+     * @param $values
+     */
+    public function setKeywords(string $values): void
+    {
+        $this->keywords = $values;
+    }
 
 
-  /**
-   * @return string
-   */
-  public function getTitle(): string
-  {
-    return $this->title;
-  }
+    /**
+     * @return array
+     */
+    public function getGenres(): array
+    {
+        return $this->genres;
+    }
 
-  /**
-   * @param string $value
-   */
-  public function setTitle(string $value): void
-  {
-    $this->title = $value;
-  }
+    /**
+     * @param array $values
+     */
+    public function setGenres(array $values): void
+    {
+        $this->genres = $values;
+    }
 
+    /**
+     * @return string
+     */
+    public function getAnnotation(): string
+    {
+        return $this->annotation;
+    }
+
+    /**
+     * @param string $value
+     */
+    public function setAnnotation(string $value): void
+    {
+        $this->annotation = $value;
+    }
+
+
+    /**
+     * @return string
+     */
+    public function getTitle(): string
+    {
+        return $this->title;
+    }
+
+    /**
+     * @param string $value
+     */
+    public function setTitle(string $value): void
+    {
+        $this->title = $value;
+    }
+
+    /**
+     * @return array
+     */
+    public function getSequence(): array
+    {
+        return $this->sequence;
+    }
+
+    /**
+     * @param array $sequence
+     */
+    public function setSequence(array $sequence): void
+    {
+        $this->sequence = $sequence;
+    }
 
 }
