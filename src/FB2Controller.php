@@ -48,12 +48,12 @@ class FB2Controller extends FB2AttributesManager
 
     public function getAuthors()
     {
-        return $this->book->authors;
+        return $this->book->getAuthors();
     }
 
     public function getTranslators()
     {
-        return $this->book->translators;
+        return $this->book->getTranslators();
     }
 
     /**
